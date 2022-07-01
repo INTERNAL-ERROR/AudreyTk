@@ -2,4 +2,7 @@
   base="app/"
   command = "npm run build"
   publish = "build/"
+  node_bundler = "esbuild"
+
+
 
