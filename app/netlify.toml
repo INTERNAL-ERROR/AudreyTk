@@ -1,0 +1,4 @@
+[build]
+  command = "npm install llhttp && npm run build"
+  publish = "build"
+
