@@ -8,10 +8,11 @@
 		"preview": "svelte-kit preview",
 		"prepare": "svelte-kit sync"
 	},
-	"devDependencies": {
-		"@sveltejs/adapter-auto": "next",
+	"type": "module",
+	"dependencies": {
+		"@sveltejs/adapter-netlify": "^1.0.0-next.66",
+        "@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
 		"svelte": "^3.44.0"
-	},
-	"type": "module"
+	}
 }
