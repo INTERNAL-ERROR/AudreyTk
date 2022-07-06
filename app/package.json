@@ -4,19 +4,17 @@
   "description": "Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).",
   "main": "svelte.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "start": "svelte-kit start",
+    "deploy": "npm run build && npm run preview -- --host",
+    "preview": "svelte-kit preview"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-    "scripts": {
-		"dev": "svelte-kit dev",
-		"build": "svelte-kit build",
-		"start": "svelte-kit start",
-		"deploy": "npm run build && npx gh-pages -d .svelte-kit/static/build -t true"
-	},
   "devDependencies": {
-    "@sveltejs/adapter-netlify": "^1.0.0-next.66",
+    "@sveltejs/adapter-netlify": "^1.0.0-next.65",
     "@sveltejs/kit": "^1.0.0-next.357",
     "svelte": "^3.48.0"
   },

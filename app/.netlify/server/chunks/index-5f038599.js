@@ -1,29 +1,3 @@
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __getOwnPropNames = Object.getOwnPropertyNames;
-var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __export = (target, all) => {
-  for (var name in all)
-    __defProp(target, name, { get: all[name], enumerable: true });
-};
-var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
-    for (let key of __getOwnPropNames(from))
-      if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
-  }
-  return to;
-};
-var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
-var stdin_exports = {};
-__export(stdin_exports, {
-  c: () => create_ssr_component,
-  e: () => escape,
-  m: () => missing_component,
-  s: () => setContext,
-  v: () => validate_component
-});
-module.exports = __toCommonJS(stdin_exports);
 function run(fn) {
   return fn();
 }
@@ -103,3 +77,4 @@ function create_ssr_component(fn) {
     $$render
   };
 }
+export { create_ssr_component as c, escape as e, missing_component as m, setContext as s, validate_component as v };

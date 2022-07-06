@@ -1,15 +1,15 @@
-const { init } = require('../serverless.js');
+import { init } from '../serverless.js';
 
-exports.handler = init({
+export const handler = init({
 	appDir: "_app",
 	assets: new Set(["favicon.png"]),
 	mimeTypes: {".png":"image/png"},
 	_: {
-		entry: {"file":"start-17e63483.js","js":["start-17e63483.js","chunks/index-c3650d4a.js"],"css":[]},
+		entry: {"file":"start-46146d1b.js","js":["start-46146d1b.js","chunks/index-c3650d4a.js"],"css":[]},
 		nodes: [
-			() => Promise.resolve().then(() => require('../server/nodes/0.js')),
-			() => Promise.resolve().then(() => require('../server/nodes/1.js')),
-			() => Promise.resolve().then(() => require('../server/nodes/2.js'))
+			() => import('../server/nodes/0.js'),
+			() => import('../server/nodes/1.js'),
+			() => import('../server/nodes/2.js')
 		],
 		routes: [
 			{
