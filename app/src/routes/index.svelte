@@ -6,28 +6,21 @@
     <input type = "text" name = "name">
    <input type="submit" value="Subscribe!">
 </form>
-
 <script>
-    function encode(data) {
-      return Object.keys(data)
-        .map(
-          (key) =>
-            encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-        )
-        .join("&");
-    }
-    
-    const handleSubmit = (event) => {
-      event.preventDefault();
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": event.target.getAttribute("name"),
-          ...name,
-        }),
-      })
-        .then(() => alert('a'))
-        .catch((error) => alert(error));
-    };
+document
+  .querySelector("form")
+  .addEventListener("submit", handleSubmit);
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  let myForm = document.getElementById("pizzaOrder");
+  let formData = new FormData(myForm);
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => console.log("Form successfully submitted"))
+    .catch((error) => alert(error));
+};
 </script>
