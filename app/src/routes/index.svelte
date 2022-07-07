@@ -27,7 +27,7 @@
           ...name,
         }),
       })
-        .then(() => navigate("/"))
+        .then(() => alert('a'))
         .catch((error) => alert(error));
     };
 </script>
