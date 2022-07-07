@@ -8,12 +8,7 @@ const config = {
           split: true,
         }),
 
-        prerender: {
-			crawl: true,
-			enabled: true,
-			force: true,
-			pages: ['*'],
-		},
+
         vite: {
            server: {
                host: '0.0.0.0',
