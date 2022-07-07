@@ -12,7 +12,7 @@ const config = {
 			crawl: true,
 			enabled: true,
             
-			pages: ['*'],
+			entries: ['*'],
 		},
         vite: {
            server: {
