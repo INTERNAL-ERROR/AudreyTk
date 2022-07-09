@@ -9,4 +9,5 @@
   external_node_modules = ["stream/web"]
 
 
-
+[context.production]
+  environment = {VITE_ENV_TYPE="prod"}
